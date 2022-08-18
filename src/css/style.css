@@ -1,0 +1,132 @@
+/* General properties */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+li,
+button,
+input {
+  font-size: 1.25rem;
+}
+
+/* Search and form styles */
+
+form {
+  max-width: 25rem;
+  margin: auto;
+}
+
+form input[type="text"] {
+  width: auto;
+  padding: 6px 15px;
+  margin-top: 8px;
+  border: none;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+
+.search-container form button,
+.search-container button {
+  float: right;
+  padding: 6px 15px;
+  margin-top: 8px;
+  background: rgba(221, 221, 221, 0.699);
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button {
+  width: fit-content;
+}
+
+.search-container button:hover {
+  transition: all 0.5s;
+  background: #ccc;
+}
+
+form:last-of-type {
+  margin-top: 0.5rem;
+}
+
+form:last-of-type button {
+  width: 100%;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+/* Grid display */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.card {
+  border-color: transparent;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Media queries breakpoints 
+- 320px
+- 480px
+- 768px
+- 1024px
+- 1200px
+*/
+
+@media (min-width: 320px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    max-width: 80rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    margin: auto;
+    padding-top: 2rem;
+  }
+}
