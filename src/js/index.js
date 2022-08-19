@@ -50,3 +50,29 @@ function searchMeal (event){
     }
 }
 
+(function(){
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+    .then(res=>res.json())
+    .then(data=> {
+        mealEl.innerHTML = data.meals.map(
+            (meal) => `
+            <div class="column">
+                <div class="card" data-mealID="${meal.idMeal}">
+                    <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
+                    <div class="card-body text-center">
+                        <div class="meal-info">
+                            <h5 class="card-title">${meal.strMeal}</h5>
+                        </div>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapse${meal.idMeal}" aria-expanded="false" aria-controls="multiCollapse${meal.idMeal}">Ver más</button>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse" id="multiCollapse${meal.idMeal}">
+                    <div class="card card-body text-center">
+                    Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    </div>
+                </div>
+            </div>
+            `
+        ).join("");
+    })
+})();
