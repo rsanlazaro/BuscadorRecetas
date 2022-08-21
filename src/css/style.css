@@ -139,3 +139,19 @@ form:last-of-type button {
     padding-top: 2rem;
   }
 }
+#expand-container {
+  overflow: hidden;
+}
+
+#expand-contract {
+  border-bottom: 1px solid white;
+  margin-top: -100%;
+  transition: all 1s;
+  size: 0px;
+  height: 0cm;
+}
+
+#expand-contract.expanded {
+   background-color: white;
+   margin-top: 0;
+}
