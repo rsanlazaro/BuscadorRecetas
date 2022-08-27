@@ -22,6 +22,14 @@ header{
   align-items: center;
 }
 
+.logo {
+  width: 20%;
+}
+
+.logo>img {
+  width: 100%;
+}
+
 p {
   font-size: 1.7rem;
 }
@@ -94,6 +102,10 @@ form:last-of-type button {
   border-color: transparent;
 }
 
+.card img{
+  border-radius: 10%;
+}
+
 .accordion-item {
   border: none;
 }
@@ -131,6 +143,24 @@ form:last-of-type button {
     gap: 3rem;
     margin: 4rem;
   }
+
+  p {
+    font-size: 1.2rem;
+  }
+  
+  li,
+  button,
+  input {
+    font-size: 1.2rem;
+  }
+
+  form input[type="text"] {
+    font-size: 1.2rem;
+  }
+    .search-container form button,
+  .search-container button {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -138,6 +168,25 @@ form:last-of-type button {
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
     margin: 4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+  
+  li,
+  button,
+  input {
+    font-size: 1.4rem;
+  }
+
+  form input[type="text"] {
+    font-size: 1.4rem;
+  }
+  
+  .search-container form button,
+  .search-container button {
+    font-size: 1.4rem;
   }
 }
 
@@ -149,7 +198,27 @@ form:last-of-type button {
     margin: auto;
     padding-top: 2rem;
   }
+
+  p {
+    font-size: 1.7rem;
+  }
+  
+  li,
+  button,
+  input {
+    font-size: 1.7rem;
+  }
+
+  form input[type="text"] {
+    font-size: 1.7rem;
+  }
+  
+  .search-container form button,
+  .search-container button {
+    font-size: 1.7rem;
+  }
 }
+
 #expand-container {
   overflow: hidden;
 }

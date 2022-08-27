@@ -13,9 +13,15 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="text-center text-white bg-dark p-5 display-6">
-      <img src="./assets/logo-food.png" width="200" height="100">
-      <h1>Buscador de recetas</h1>
+    <header class="text-center text-white bg-dark p-2 display-6">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="assets/logo-food-white.png" alt="Matcha" />
+            </a>
+            <h1 class="fw-bold nav-color text-white">Buscador de recetas</h1>
+        </div>
+      </nav>
     </header>
     <main>
       <section class="p-4">
@@ -33,8 +39,8 @@
         </div>
         <div class="search-container">
           <form class="d-flex justify-content-center" id="submit">
-            <input type="text" placeholder="Busca una receta" name="search" id="search" />
-            <button type="submit">Buscar</button>
+            <input type="text" placeholder="Busca una receta" name="search" id="search" onkeyup="verificar(this.value);"/>
+            <button disabled type="submit" id="btnBuscar">Buscar</button>
           </form>
           <form class="d-flex justify-content-center">
             <button id="randomBtn">Mostrar receta aleatoria</button>
@@ -68,6 +74,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/activateBtn.js"></script>
 
   </body>
 </html>
