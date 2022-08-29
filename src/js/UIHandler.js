@@ -182,9 +182,6 @@ function createCard(search,random=false,keepLastSearch=false){
                         newItemLi.appendChild(newItemDiv)
                         newIngredientList.appendChild(newItemLi)
 
-                        console.log(meal[`strIngredient${i}`])
-                        console.log(meal[`strMeasure${i}`])
-
 
                                 
                             }
@@ -285,7 +282,10 @@ function createCard(search,random=false,keepLastSearch=false){
 
             const newAccInsBody= document.createElement('div')
             newAccInsBody.className='acc-body'
-            newAccInsBody.textContent=meal.strInstructions
+            const newAccItemInsText = document.createElement('p')
+            newAccItemInsText.className='h5'
+            newAccItemInsText.textContent=meal.strInstructions
+            newAccInsBody.appendChild(newAccItemInsText)
 
 
             newAccItemIngHeader.appendChild(newAccIngButton)
@@ -325,8 +325,8 @@ function createCard(search,random=false,keepLastSearch=false){
             newModalSectionParagraph.textContent = meal.strInstructions
             
             const newVideo= document.createElement('iframe')
-            newVideo.setAttribute('width','80%')
-            newVideo.setAttribute('height','400')
+            newVideo.id='video'
+           
             console.log(meal.strYoutube)
             const linkVideo = meal.strYoutube.slice(32,meal.strYoutube.lenght)
             console.log(linkVideo)
@@ -344,7 +344,7 @@ function createCard(search,random=false,keepLastSearch=false){
             
 
             const newWatchOnYoutube = document.createElement('a')
-            newWatchOnYoutube.textContent='¡Ver Turotial de la receta!'
+            newWatchOnYoutube.textContent='¡Ver Tutorial de la receta!'
             newWatchOnYoutube.setAttribute('target',"_blank")
             
             newWatchOnYoutube.href = meal.strYoutube

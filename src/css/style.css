@@ -317,7 +317,11 @@ form:last-of-type button {
 }
 
 .modal-body {
-  display: flex; 
+  display: grid; 
+  justify-items: center;
+  
+  max-height:600px;
+
   
   flex-direction: column;
   align-items: center;
@@ -326,7 +330,10 @@ form:last-of-type button {
   
   overflow-y: auto;
 }
-
+#video{
+  width:80%;
+  height:400px
+}
 .modal-footer {
   padding: 2px 16px;
   background-color: #212529;
