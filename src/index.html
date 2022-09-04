@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Recetas</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,14 +13,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="text-center text-white bg-dark p-5 display-6">
-      Buscador de recetas
+    <header class="text-center text-white bg-dark p-2 display-6">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="assets/logo-food-white.png" alt="Matcha" />
+            </a>
+            <h1 class="fw-bold nav-color text-white">Buscador de recetas</h1>
+        </div>
+      </nav>
     </header>
-    <main>
+    <main id="main">
       <section class="p-4">
         <p class="text-center">
           Bienvenido al buscador de recetas online donde podrás encontrar una
-          gran variedad de recetas, donde cada receta incluye:
+          gran variedad de recetas. Cada receta incluye:
         </p>
         <div class="d-flex">
           <ul class="mx-auto justify-content-center">
@@ -32,11 +39,11 @@
         </div>
         <div class="search-container">
           <form class="d-flex justify-content-center" id="submit">
-            <input type="text" placeholder="Busca una receta" name="search" id="search" />
-            <button type="submit">Buscar</button>
+            <input type="text" placeholder="Busca una receta" name="search" id="search" onkeyup="verificar(this.value);"/>
+            <button disabled type="submit" id="btnBuscar">Buscar</button>
           </form>
-          <form action="/action_page.php" class="d-flex justify-content-center">
-            <button type="submit">Mostrar receta aleatoria</button>
+          <form class="d-flex justify-content-center">
+            <button id="randomBtn">Mostrar receta aleatoria</button>
           </form>
         </div>
       </section>
@@ -45,27 +52,19 @@
       </section>
   
       <div class="grid" id="card-meal">
-        <!-- <div class="column">    
-          <div class="card">
-            <img src="https://www.sinrumbofijo.com/wp-content/uploads/2016/05/default-placeholder.png" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">Receta 1</h5>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Ver más</button>
-            </div>
-          </div>
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body text-center">
-              Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
-            </div>
-          </div>
-        </div> -->
+        
       </div>
+      
+      
+      
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/activateBtn.js"></script>
+
   </body>
 </html>
