@@ -8,7 +8,7 @@ Fue desarrollado utilizando JavaScript, Boostrap y CSS.
 ![logo](src/assets/logo-food-white.png)
 
 # Integrantes
-## Equipo 7
+## Equipo 10
 Los integrantes han sido conformados por:
 
 - Alejandro Lopez -[Alopez-7](https://github.com/Alopez-7)
