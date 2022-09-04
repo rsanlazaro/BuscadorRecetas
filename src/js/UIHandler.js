@@ -13,7 +13,7 @@ function createCard(search,random=false,keepLastSearch=false){
         messageSearch.textContent = `Resultado de la búsqueda de ${search}`;
         if(dataFromResponse.meals != null){
             dataFromResponse.meals.forEach(item =>{
-                console.log(item)
+               // console.log(item)
                 
                         
                         const newColumn = document.createElement('div')
@@ -137,7 +137,8 @@ function createCard(search,random=false,keepLastSearch=false){
                         const meals = document.getElementById('card-meal')
                         newColumn.appendChild(newCard)
                         newColumn.appendChild(newCardCollapse)
-                        meals.appendChild(newColumn)
+                        meals.insertBefore(newColumn, meals.firstChild);
+                        
                         
                 
                     })
