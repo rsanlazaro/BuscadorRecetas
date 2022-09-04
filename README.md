@@ -27,7 +27,7 @@ Los integrantes han sido conformados por:
  - Receta Aleatorea *(Entrega una receta obtenida de manera aleatorea mediante la API)*
  - - Se utiliza cada vez que se presiona el Boton 
  - - Se utliliza para pre polpular la landing page al abrirla o hacer refresh  
- - Modal Intrucciones*(Ofrece la opcion de ver la receta mas a detalle)*
+ - Modal Intrucciones *(Ofrece la opcion de ver la receta mas a detalle)*
  - - Nor permite ver un video de youtube con la etiqueta iframe
  - - Hace uso del elemento de boostrap Accordion para deplegar informacion de intrucciones e ingredientes 
 
